@@ -6,7 +6,7 @@ from django.views.generic.base import TemplateView
 
 urlpatterns = [
     # Examples:
-    # url(r'^$', 'mole.views.home', name='home'),
+    url(r'^$', auth_views.login, name='home'),
     # url(r'^blog/', include('blog.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^login/$', auth_views.login, name='login'),
