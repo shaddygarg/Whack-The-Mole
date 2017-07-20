@@ -1,0 +1,14 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Whack The Mole</title>
+</head>
+<body>
+<p>Hello {{ user.username }}!</p>
+<a href="{% url 'game'%}"><button>Play</button></a>
+<a href="{% url 'leaderboard' %}"><button>Leaderboard</button>
+<br>
+<a href="{% url 'logout'%}"><button>Logout</button></a>
+</body>
+</html>

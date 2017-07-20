@@ -1,0 +1,5 @@
+<a href="{% url 'profile' %}"><button>Home</button></a>
+<br>
+{% for i in highscores %}
+{{i.username}} {{i.score}}<br>
+{%endfor%}

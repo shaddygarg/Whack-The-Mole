@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js" type="text/javascript"></script>
+<script src="{% static 'game/game.js'%}"></script>
+<head>
+	<title>Whack the mole</title>
+</head>
+<body ng-app='whackthemole'>
+<div ng-controller='initialize'>
+<div align="center">SCORE:[[score]]</div>
+<div>
+	<table align="center">
+		<tr ng-repeat='row in grid.rows'>
+			<td ng-repeat='spot in row.spots' ng-mousedown='clickedMouse(spot)' ng-mouseup='releasedMouse(spot)	'>
+				<img ng-if='!spot.isCovered' src="{% static 'game/images/grass.jpg'%}">
+				<img ng-if='spot.isCovered && !spot.click' src="{% static 'game/images/mole.png'%}" width="175px" height="175px">
+				<img ng-if='spot.isCovered && spot.click' src="{%static 'game/images/molehit.png'%}" width="175px" height="175px">
+			</td>
+		</tr>
+	</table>
+</div>
+<div align="center"><button ng-click='endGame()'>End Game</button></div>
+</div>
+
+</body>
+</html>

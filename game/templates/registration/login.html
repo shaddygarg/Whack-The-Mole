@@ -1,0 +1,17 @@
+<html>
+        <head>
+                <title>
+                        Login
+                </title>
+        </head>
+        <body>
+                <h1>Whack The Mole</h1>
+                <a href = "{% url 'social:begin' 'facebook' %}">Login via Facebook</a>
+                <br>
+                <a href = "{% url 'social:begin' 'github' %}">Login via github</a>
+                <br>
+
+                <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">Login with Google</a>
+        </body>
+</html>
+
