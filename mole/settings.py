@@ -29,7 +29,7 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '9fl!4agxbdv13$sbo2_n+%vno)dg&#%na+tl@ug0l3g(s2rvxf'
+SECRET_KEY = 'ENTER YOUR SECRET KEY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -102,14 +102,14 @@ AUTHENTICATION_BACKENDS = (
             'django.contrib.auth.backends.ModelBackend',
             'social.backends.google.GoogleOAuth2',
 )
-SOCIAL_AUTH_GITHUB_KEY = '857e3b25959cbae67e2d'
-SOCIAL_AUTH_GITHUB_SECRET = '4fe3f1c8a06277a638185bdd25349387b71cc77a'
+SOCIAL_AUTH_GITHUB_KEY = 'ENTER YOUR GITHUB KEY'
+SOCIAL_AUTH_GITHUB_SECRET = 'ENTER YOUR GITHUB SECRET'
 
-SOCIAL_AUTH_FACEBOOK_KEY = '2099138203646824'
-SOCIAL_AUTH_FACEBOOK_SECRET = 'c078da969e06187117859631be8be97b'
+SOCIAL_AUTH_FACEBOOK_KEY = 'ENTER YOUR FACEBOOK KEY'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'ENTER YOUR FACEBOOK SECRET'
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='727040775148-qtbrpvoqtaq9rl80kkh595rupsggta3p.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET ='M2ItMr4rikv7VwcwkgYbJ2cX'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='ENTER YOUR GOOGLE KEY'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET ='ENTER YOUR GITHUB SECRET'
 
 WSGI_APPLICATION = 'mole.wsgi.application'
 
